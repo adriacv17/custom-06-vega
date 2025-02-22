@@ -1,3 +1,7 @@
+###################################
+# Imports
+###################################
+
 from utils.utils_consumer import create_consumer, process_sensor_data, detect_anomaly
 from utils.utils_logger import log_info
 from collections import deque
@@ -16,13 +20,13 @@ init_db(DB_PATH)
 # Create Kafka consumer instance
 consumer = create_consumer()
 
-# Initialize deque (fixed-length queues) to store the latest sensor data for plotting
+# Deque used to store the latest sensor data for plotting
 timestamps = deque(maxlen=20)
 temperatures = deque(maxlen=20)
 pressures = deque(maxlen=20)
 
 # Setup Matplotlib for real-time plotting (2 rows, 1 column)
-fig, ax = plt.subplots(2, 1, figsize=(10, 8))  # Changed from (3, 1) to (2, 1)
+fig, ax = plt.subplots(2, 1, figsize=(10, 8)) 
 
 # Temperature plot
 temp_line, = ax[0].plot([], [], label='Temperature (°C)')
