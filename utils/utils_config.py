@@ -1,4 +1,26 @@
+"""
+Config Utility
+File: utils/utils_config.py
+
+This script provides the configuration functions for the project. 
+
+It centralizes the configuration management 
+by loading environment variables from .env in the root project folder
+ and constructing file paths using pathlib. 
+
+If you rename any variables in .env, remember to:
+- recopy .env to .env.example (and hide the secrets)
+- update the corresponding function in this module.
+"""
+
+###################################################
+# Imports
+###################################################
+
+# import from Python Standard Library
 import os
+
+# import from external packages
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
