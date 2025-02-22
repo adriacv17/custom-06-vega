@@ -26,8 +26,9 @@ def process_sensor_data(message, timestamps, temperatures, pressures):
     except KeyError as e:
         log_error(f"Missing key in sensor data: {e}")
 
+
+# Anomaly detector using conditionals
 def detect_anomaly(sensor_data):
-    """Check for anomalies in the sensor data."""
     anomaly_message = None
     if sensor_data['temperature'] > 90:
         anomaly_message = "Anomaly Detected: High Temperature"
