@@ -39,7 +39,7 @@ The data is displayed on live charts so you can see exactly what’s going on wi
 
 ### Step 1: Set Up Your Environment
 
-Before running the project, make sure you've set up **Kafka** and **Zookeeper**. Follow the instructions in **SETUP-KAFKA.md**.
+Before running the project, make sure you've set up **Kafka** and **Zookeeper**.
 
 - Make sure you have **Python 3.11** installed.
 - Start **Zookeeper** and **Kafka** if they’re not already running.
@@ -51,6 +51,16 @@ Once you have everything ready, fork this project into your own GitHub account. 
 ### Step 3: Manage Your Virtual Environment
 
 Follow the steps in **MANAGE-VENV.md** to create and activate your virtual environment (`.venv`), then install the dependencies listed in **requirements.txt**.
+
+Install requirements text using:
+
+Windows Command (don't include the #):
+py -m pip install --upgrade pip setuptools wheel
+py -m pip install -r requirements.txt
+
+Mac/Linux Command (don't include the #):
+python3 -m pip install --upgrade pip setuptools wheel
+python3 -m pip install --upgrade -r requirements.txt
 
 ### Step 4: Start Kafka and Zookeeper (Two Terminals)
 
